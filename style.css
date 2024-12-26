@@ -31,3 +31,24 @@ h1 {
   background: #f9f9f9;
   border-radius: 5px;
 }
+
+button {
+  height: 50px;
+  width: 120px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /*Creates the floating effect*/
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /*Slightly larger shadow on hover*/
+  transform: translateY(-0.5px);
+}
+button:active {
+  transform: scale(0.98);
+}

@@ -21,7 +21,8 @@ const quotes = [
   "Everything you’ve ever wanted is on the other side of fear. — George Addair",
 ];
 
-function generateQuote() {
+/* Uses setInterval() to change quote and background colour automatically.
+ function generateQuote() {
   let red = Math.floor(Math.random() * 256);
   let green = Math.floor(Math.random() * 256);
   let blue = Math.floor(Math.random() * 256);
@@ -32,3 +33,17 @@ function generateQuote() {
 }
 
 setInterval(generateQuote, 4000);
+*/
+
+//Generates quotes and changes background colour when button is clicked.
+let button = document.querySelector("button");
+button.addEventListener("click", () => {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let index = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").textContent = quotes[index];
+  let bodyElement = document.querySelector("body");
+  bodyElement.style.backgroundColor = `rgb(${red},${green},${blue})`;
+});
+
